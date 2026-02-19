@@ -2,7 +2,7 @@ local addonSettingsWindow
 
 ---Create a addon settings window.
 ---@return Window
-local function CreateExampleAddonSettingsWindow()
+local function CreateAddonSettingsWindow()
   local window      = SetViewOfAddonSettings()
   local titleBar    = window.titleBar ---@type Window
   local closeButton = titleBar.closeButton ---@type Button
@@ -44,7 +44,7 @@ local function ToggleAddonSettingsWindow(show)
 
   -- If the window should be shown and doesn't exist, create it.
   if show == true and addonSettingsWindow == nil then
-    addonSettingsWindow = CreateExampleAddonSettingsWindow()
+    addonSettingsWindow = CreateAddonSettingsWindow()
 
     addonSettingsWindow:SetDeletedHandler(function ()
       addonSettingsWindow = nil

@@ -14,7 +14,7 @@ WINDOW = {
 
 ---Sets up the view of the addon window.
 ---@return Window
-function SetViewOfExampleAddon()
+function SetViewOfAddon()
   local window = UIParent:CreateWidget("window", "addon", "UIParent")
   window:AddAnchor("CENTER", "UIParent", 0, 0)
   window:SetExtent(WINDOW.WIDTH, WINDOW.HEIGHT)

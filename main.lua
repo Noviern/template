@@ -4,9 +4,9 @@ local addonWindow
 ---Creates a addon window.
 ---@return Window
 local function CreateAddonWindow()
-  local window      = SetViewOfExampleAddon()
-  local titleBar    = window.titleBar ---@type Window
-  local closeButton = titleBar.closeButton ---@type Button
+  local window       = SetViewOfAddon()
+  local titleBar     = window.titleBar ---@type Window
+  local closeButton  = titleBar.closeButton ---@type Button
   local contentFrame = window.contentFrame ---@type EmptyWidget
 
   window:SetSounds("bag")
