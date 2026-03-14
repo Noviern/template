@@ -1,6 +1,5 @@
 [English](README.md) | [Français](README.fr.md) | [Русский](README.ru.md) | [简体中文](README.zh_cn.md)
 
-# 模板插件
 # 插件模板
 
 新插件的最小起步模板。
