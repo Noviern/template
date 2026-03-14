@@ -12,7 +12,7 @@ local function CreateAddonSettingsWindow()
   window:EnableHidingIsRemove(true)
   window:SetAlphaAnimation(0, 1, .1, .1)
   window:SetStartAnimation(true, true)
-  window:SetUILayer("system")
+  window:SetUILayer("normal")
 
   window:SetHandler("OnScale", function (self)
     CorrectWidgetScreenPos(window)
@@ -58,5 +58,4 @@ local function ToggleAddonSettingsWindow(show)
 end
 
 UIParent:SetEventHandler("UI_ADDON", ToggleAddonSettingsWindow)
-
 -- ToggleAddonSettingsWindow()

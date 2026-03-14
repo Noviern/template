@@ -1,9 +1,16 @@
+SETTINGS_WINDOW = {
+  WIDTH               = 680,
+  HEIGHT              = 680,
+  MARGIN              = 20,
+  CLOSE_BUTTON_OFFSET = 3,
+}
+
 ---Sets up the view of the example addon settings window.
 ---@return Window
 function SetViewOfAddonSettings()
   local window = UIParent:CreateWidget("window", "addonSettings", "UIParent")
   window:AddAnchor("CENTER", "UIParent", 0, 0)
-  window:SetExtent(WINDOW.WIDTH, WINDOW.HEIGHT)
+  window:SetExtent(SETTINGS_WINDOW.WIDTH, SETTINGS_WINDOW.HEIGHT)
 
   local background = window:CreateDrawable(TEXTURE_PATH.DEFAULT, "main_bg", "background")
   background:AddAnchor("TOPLEFT", window, -5, -5)
@@ -26,11 +33,11 @@ function SetViewOfAddonSettings()
 
   local closeButton = titleBar:CreateChildWidget("button", "closeButton", 0, true)
   closeButton:SetStyle("btn_close_default")
-  closeButton:AddAnchor("TOPRIGHT", titleBar, WINDOW.CLOSE_BUTTON_OFFSET, -WINDOW.CLOSE_BUTTON_OFFSET)
+  closeButton:AddAnchor("TOPRIGHT", titleBar, SETTINGS_WINDOW.CLOSE_BUTTON_OFFSET, -SETTINGS_WINDOW.CLOSE_BUTTON_OFFSET)
 
   local contentFrame = window:CreateChildWidget("emptywidget", "contentFrame", 0, true)
-  contentFrame:AddAnchor("TOPLEFT", titleBar, "BOTTOMLEFT", WINDOW.MARGIN, 0)
-  contentFrame:AddAnchor("BOTTOMRIGHT", window, "BOTTOMRIGHT", -WINDOW.MARGIN, -WINDOW.MARGIN)
+  contentFrame:AddAnchor("TOPLEFT", titleBar, "BOTTOMLEFT", SETTINGS_WINDOW.MARGIN, 0)
+  contentFrame:AddAnchor("BOTTOMRIGHT", window, "BOTTOMRIGHT", -SETTINGS_WINDOW.MARGIN, -SETTINGS_WINDOW.MARGIN)
 
   return window
 end

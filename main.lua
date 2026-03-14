@@ -61,5 +61,4 @@ end
 
 ADDON:RegisterContentTriggerFunc(UIC_ADDON, ToggleAddonWindow)
 ADDON:AddEscMenuButton(5, UIC_ADDON, "optimizer", locale.addon.name)
-
 -- ToggleAddonWindow()
